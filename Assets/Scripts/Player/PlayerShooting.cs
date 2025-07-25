@@ -19,6 +19,8 @@ public class PlayerShooting : MonoBehaviour
 
     private void Update()
     {
+        if (PauseMenu.GetPauseStatus()) return;
+
         if (Input.GetKey(KeyCode.Space) && _canShoot)
         {
             Shoot();
