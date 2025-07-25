@@ -6754,6 +6754,7 @@ MonoBehaviour:
   _timeBetweenShots: 0.5
   _empowerDuration: 900
   _canShoot: 0
+  _freeShooting: 1
 --- !u!114 &1463975223
 MonoBehaviour:
   m_ObjectHideFlags: 0
