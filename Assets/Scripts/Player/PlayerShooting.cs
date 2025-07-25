@@ -10,6 +10,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private float _timeBetweenShots;
     [SerializeField] private float _empowerDuration;
     [SerializeField] private bool _canShoot;
+    [SerializeField] private bool _freeShooting;
     private bool _isEmpowered = false;
 
     private void Start()
@@ -19,7 +20,10 @@ public class PlayerShooting : MonoBehaviour
 
     private void Update()
     {
-        if (PauseMenu.GetPauseStatus()) return;
+        if (!_freeShooting)
+        {
+            if (PauseMenu.GetPauseStatus()) return;
+        }
 
         if (Input.GetKey(KeyCode.Space) && _canShoot)
         {
