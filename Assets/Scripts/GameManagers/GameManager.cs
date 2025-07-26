@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _gameOverScreen.SetActive(false);
+        SoundManager.Instance.PlayFlightMusic();
     }
 
     /// <summary>

@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    private int _currentIndex;
+    private int _maxIndex;
+
     public static SoundManager Instance { get; private set; }
 
     private void Awake()
@@ -17,7 +20,7 @@ public class SoundManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Start playing the music
+    /// Start playing music
     /// </summary>
     public void PlayMusic(AudioSource track, bool isScheduled = false, float Schedule = 0f)
     {
@@ -30,5 +33,15 @@ public class SoundManager : MonoBehaviour
         {
             track.Play();
         }
+    }
+
+    /// <summary>
+    /// Start playing flight music
+    /// </summary>
+    public void PlayFlightMusic()
+    {
+        _maxIndex = SoundsStorage.Instance._flyThemes.Length - 1;
+        _currentIndex = Random.Range(0, _maxIndex + 1);
+        SoundsStorage.Instance._flyThemes[_currentIndex].Play();
     }
 }
