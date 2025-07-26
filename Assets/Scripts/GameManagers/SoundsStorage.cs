@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class SoundsStorage : MonoBehaviour
 {
-    [SerializeField] private AudioSource[] _sounds;
+    [SerializeField] private AudioSource _titleTheme;
+    [SerializeField] private AudioSource _creditsTheme;
+    [SerializeField] private AudioSource[] _flyThemes;
 
     public static SoundsStorage Instance { get; private set; }
 
