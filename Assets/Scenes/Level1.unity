@@ -1490,7 +1490,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -7292,7 +7292,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -8676,9 +8676,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 1593094038}
   - {fileID: 1173034705}
   - {fileID: 1904006119}
+  - {fileID: 1593094038}
+  - {fileID: 1463975217}
   - {fileID: 1529660742}
   - {fileID: 193838882}
-  - {fileID: 1463975217}
