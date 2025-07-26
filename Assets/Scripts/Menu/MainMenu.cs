@@ -4,11 +4,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private string _levelName, _creditsName;
-    [SerializeField] private AudioSource _titleTheme;
 
     private void Start()
     {
-        SoundManager.Instance.PlayMusic(_titleTheme);
+        SoundManager.Instance.PlayMusic(SoundsStorage.Instance._titleTheme);
     }
 
     /// <summary>
