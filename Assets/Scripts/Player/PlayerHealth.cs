@@ -20,11 +20,11 @@ public class PlayerHealth : MonoBehaviour
     /// Take tamage to the ship
     /// </summary>
     /// <param name="damage"></param>
-    public void DealDamage(int damage)
+    public void DealDamage(int damage, Vector3 pos)
     {
         if (_isImmortal)
         {
-            Instantiate(EffectsStorage.Instance._damageEffect, transform.position, Quaternion.identity);
+            Instantiate(EffectsStorage.Instance._forceFieldDamage, pos, Quaternion.identity);
         }
         else
         {
@@ -79,7 +79,7 @@ public class PlayerHealth : MonoBehaviour
                 return;
             }
 
-            DealDamage(_shipCollisionDamage);
+            DealDamage(_shipCollisionDamage, collision.transform.position);
         }
     }
 

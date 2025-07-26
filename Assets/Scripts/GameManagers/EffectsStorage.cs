@@ -14,6 +14,7 @@ public class EffectsStorage : MonoBehaviour
 
     [Header("Damage Effects")]
     public GameObject _damageEffect;
+    public GameObject _forceFieldDamage;
     public GameObject _playerExplosionEffect; 
     public GameObject _targetExplosionEffect;
 

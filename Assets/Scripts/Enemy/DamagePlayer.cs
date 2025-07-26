@@ -8,7 +8,7 @@ public class DamagePlayer : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerHealth>().DealDamage(damage);
+            collision.GetComponent<PlayerHealth>().DealDamage(damage, transform.position);
 
             if (GetComponent<Renderer>())
             {
