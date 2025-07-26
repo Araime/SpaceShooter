@@ -22,11 +22,11 @@ public class SoundManager : MonoBehaviour
     /// <summary>
     /// Start playing music
     /// </summary>
-    public void PlayMusic(AudioSource track, bool isScheduled = false, float Schedule = 0f)
+    public void PlayMusic(AudioSource track, bool isSkipped = false, float Position = 0f)
     {
-        if (isScheduled)
+        if (isSkipped)
         {
-            track.time = Schedule;
+            track.time = Position;
             track.Play();
         }
         else
